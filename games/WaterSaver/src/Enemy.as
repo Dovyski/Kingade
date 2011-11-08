@@ -7,16 +7,19 @@ package
 
 	public class Enemy extends FlxSprite
 	{
-		[Embed(source = '../assets/baddie_cat_1.png')] private var catPNG:Class;
+		[Embed(source = '../assets/mr_trash.png')] private var mrTrashPNG:Class;
 		
-		public var isDying:Boolean = false;
+		public var isDying				:Boolean = false;
+		private var lastPos 			:FlxPoint;
+		private var standingSamePlace	:int = 0;
 		
 		public function Enemy(x:int, y:int) {
-			super(x * 16, y * 16);
+			super(x * Constants.TILE_SIZE, y * Constants.TILE_SIZE);
 			
-			loadGraphic(catPNG, true, true, 16, 16);
+			loadGraphic(mrTrashPNG, true, true, 42, 52);
 			
-			facing = FlxObject.RIGHT;
+			facing 		= FlxObject.RIGHT;
+			lastPos 	= new FlxPoint();
 			
 			addAnimation("walk", [0, 1], 6, true);
 			play("walk");
@@ -24,6 +27,8 @@ package
 			acceleration.y = 50;
 			velocity.x = 30;
 		}
+		
+
 		
 		override public function kill():void {
 			FlxG.play(catty2SFX, 0.5, false, true);
@@ -44,33 +49,28 @@ package
 		override public function update():void {
 			super.update();
 			
-			//	Check the tiles on the left / right of it
-			
-			var tx:int = int(x / 16);
-			var ty:int = int(y / 16);
-			
-			if (facing == FlxObject.LEFT) {
-				//	31 is the Collide Index of our Tilemap (which sadly isn't exposed in Flixel 2.5, so is hard-coded here. Not ideal I appreciate)
-				if (PlayState(FlxG.state).level.map.getTile(tx - 1, ty) >= 31) {
-					turnAround();
-					return;
-				}
+			if (int(lastPos.x) == int(x) && int(lastPos.y) == int(y)) {
+				standingSamePlace++;
 				
-			} else {
-				//	31 is the Collide Index of our Tilemap (which sadly isn't exposed in Flixel 2.5, so is hard-coded here. Not ideal I appreciate)
-				if (PlayState(FlxG.state).level.map.getTile(tx + 1, ty) >= 31) {
+				if (standingSamePlace > 10) {
 					turnAround();
-					return;
 				}
+			} else {
+				standingSamePlace = 0;
 			}
 			
 			//	Check the tiles below it
 			if (!isTouching(FlxObject.FLOOR) && !isDying) {
 				turnAround();
 			}
+			
+			lastPos.x 	= x;
+			lastPos.y 	= y;
 		}
 		
 		private function turnAround():void {
+			standingSamePlace 	= 0;
+			
 			if (facing == FlxObject.RIGHT) {
 				facing = FlxObject.LEFT;
 				velocity.x = -30;

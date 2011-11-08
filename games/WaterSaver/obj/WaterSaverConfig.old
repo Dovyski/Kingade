@@ -16,20 +16,20 @@
     </define>
     <define append="true">
       <name>CONFIG::timeStamp</name>
-      <value>'03/11/2011'</value>
+      <value>'08/11/2011'</value>
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
-      <path-element>C:\Temp\FlashDevelop\Kingd\WaterSaver\src</path-element>
+      <path-element>C:\Temp\FlashDevelop\Kingad\games\WaterSaver\src</path-element>
       <path-element>C:\Program Files\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
     <library-path append="true">
-      <path-element>C:\Temp\FlashDevelop\Kingd\WaterSaver\lib\audio.swc</path-element>
-      <path-element>C:\Temp\FlashDevelop\Kingd\WaterSaver\lib\greensock.swc</path-element>
+      <path-element>C:\Temp\FlashDevelop\Kingad\games\WaterSaver\lib\audio.swc</path-element>
+      <path-element>C:\Temp\FlashDevelop\Kingad\games\WaterSaver\lib\greensock.swc</path-element>
     </library-path>
   </compiler>
   <file-specs>
-    <path-element>C:\Temp\FlashDevelop\Kingd\WaterSaver\src\Main.as</path-element>
+    <path-element>C:\Temp\FlashDevelop\Kingad\games\WaterSaver\src\Main.as</path-element>
   </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>60</default-frame-rate>
