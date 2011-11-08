@@ -56,12 +56,9 @@ package
 			FlxG.overlap(player, level.enemies, hitEnemy);
 			FlxG.overlap(player, level.taps, hitTap);
 			
-			//	Player walked through end of level exit?
-			if (player.x > level.levelExit.x && player.y == level.levelExit.y) {
-				player.exists = false;
-				FlxG.fade(0xff000000, 2, changeState);
-				FlxG.music.fadeOut(2);
-			}
+			//player.exists = false;
+			//FlxG.fade(0xff000000, 2, changeState);
+			//FlxG.music.fadeOut(2);
 		}
 		
 		private function changeState():void {
@@ -87,9 +84,7 @@ package
 			starFX.play(true);
 			
 			if (FlxG.score == level.totalTaps) {
-				//	Opens the exit at the end of the level
 				score.text = FlxG.score.toString() + " / " + level.totalTaps.toString() + " EXIT OPEN!";
-				level.openExit();
 				
 			} else {
 				score.text = FlxG.score.toString() + " / " + level.totalTaps.toString();

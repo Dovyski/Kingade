@@ -11,8 +11,7 @@ package
 		private var walkFX:FlxSound;
 		private var start:FlxPoint;
 		
-		public function Player(x:Number, y:Number)
-		{
+		public function Player(x:Number, y:Number) {
 			//	As this extends FlxSprite we need to call super() to ensure all of the parent variables we need are created
 			super(x, y);
 			
@@ -73,42 +72,27 @@ package
 		}
 		
 		//	We don't actually kill the player at all, we just reset them
-		public function restart():void
-		{
+		public function restart():void {
+			// TODO: anim?
 			reset(start.x, start.y);
 		}
 		
-		override public function update():void
-		{
+		override public function update():void {
 			super.update();
 			
-			if (x < 0)
-			{
+			if (x < 0) {
 				x = 0;
 			}
 			
-			//	Have they hit the water?
-			if (y > 268)
-			{
-				//restart();
-			}
-			
-			if (touching == FlxObject.FLOOR)
-			{
-				if (velocity.x != 0)
-				{
+			if (touching == FlxObject.FLOOR) {
+				if (velocity.x != 0) {
 					play("walk");
-				}
-				else
-				{
+				} else {
 					play("idle");
 				}
-			}
-			else if (velocity.y < 0)
-			{
+			} else if (velocity.y < 0) {
 				play("jump");
 			}
 		}
-		
 	}
 }
