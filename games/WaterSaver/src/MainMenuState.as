@@ -38,7 +38,7 @@ package
 			
 			level = new Level1();
 			
-			start = new FlxText(0, 226, 320, "- ANY KEY TO START -");
+			start = new FlxText(0, 226, 320, "Pressione qualquer tecla para começar");
 			start.alignment = "center";
 			start.shadow = 0xff000000;
 			start.scrollFactor.x = 0;
@@ -91,15 +91,12 @@ package
 			}
 		}
 		
-		private function changeState():void
-		{
-			FlxG.switchState(new PlayState);
+		private function changeState():void {
+			FlxG.switchState(new CinematicsState);
 		}
 		
-		override public function destroy():void
-		{
-			FlxSpecialFX.clear();
-			
+		override public function destroy():void	{
+			FlxSpecialFX.clear();			
 			super.destroy();
 		}
 		

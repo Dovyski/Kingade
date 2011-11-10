@@ -55,14 +55,16 @@ package
 			
 			FlxG.overlap(player, level.enemies, hitEnemy);
 			FlxG.overlap(player, level.taps, hitTap);
-			
-			//player.exists = false;
-			//FlxG.fade(0xff000000, 2, changeState);
-			//FlxG.music.fadeOut(2);
 		}
 		
-		private function changeState():void {
+		private function changeState() :void {
 			FlxG.switchState(new LevelEndState);
+		}
+		
+		private function levelUp() :void {
+			player.exists = false;
+			FlxG.fade(0xff000000, 2, changeState);
+			FlxG.music.fadeOut(2);
 		}
 		
 		private function hitEnemy(player:FlxObject, enemy:FlxObject):void {
@@ -83,8 +85,8 @@ package
 			FlxG.score += 1;
 			starFX.play(true);
 			
-			if (FlxG.score == level.totalTaps) {
-				score.text = FlxG.score.toString() + " / " + level.totalTaps.toString() + " EXIT OPEN!";
+			if (FlxG.score >= level.totalTaps) {
+				levelUp();
 				
 			} else {
 				score.text = FlxG.score.toString() + " / " + level.totalTaps.toString();
