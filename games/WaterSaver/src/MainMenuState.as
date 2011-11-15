@@ -203,7 +203,7 @@ package
 		}
 		
 		private function startCreditsState():void {
-			FlxG.switchState(new CinematicsState);
+			FlxG.switchState(new CreditsState);
 		}
 		
 		override public function destroy():void	{
