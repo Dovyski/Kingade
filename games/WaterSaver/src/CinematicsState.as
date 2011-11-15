@@ -26,7 +26,7 @@ package
 										water06PNG
 									];
 		private var texts 			:Array = [
-										[ { "x": 50, "y": 65, "width": 230, "text": "A ÁGUA é algo fundamental para a vida! Temos que cuidar dela." } ],
+										[ { "x": 50, "y": 65, "width": 230, "text": "Olá!\nSou o Sr. Água. Aperte qualquer tecla para continuar..." } ],
 										[ { "x": 242, "y": 35, "width": 215, "text": "\nExiste bastante água, mas ela pode acabar um dia..." } ],
 										[ { "x": 270, "y": 370, "width": 215, "text": "Esse é o ciclo da água. Temos que cuidar dele e poupar água." } ],
 										[ { "x": 260, "y": 75, "width": 215, "text": "Feche a torneira enquanto escova os dentes. Não gaste água potável!" } ],

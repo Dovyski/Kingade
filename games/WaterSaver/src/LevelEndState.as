@@ -4,70 +4,64 @@ package
 	
 	public class LevelEndState extends FlxState
 	{
-		[Embed(source = "../assets/mapCSV_LevelEnd_Sky.csv", mimeType = "application/octet-stream")] public var skyCSV:Class;
-		[Embed(source = "../assets/backdrop.png")] public var skyTilesPNG:Class;
+		[Embed(source = "../assets/water_00.png")] public var water00PNG:Class;
 		[Embed(source = "../assets/star.png")] public var starPNG:Class;
 		
-		private var sky:FlxTilemap;
-		private var won:FlxText;
-		private var stars:FlxEmitter;
+		private var background	:FlxSprite;
+		private var won			:FlxText;
+		private var stars		:FlxEmitter;
 
-		public function LevelEndState() 
-		{
+		public function LevelEndState() {
 		}
 		
-		override public function create():void
-		{
-			sky = new FlxTilemap;
-			sky.loadMap(new skyCSV, skyTilesPNG, 192, 336);
+		override public function create():void {
+			background = new FlxSprite(0, 0, water00PNG);
 			
-			won = new FlxText(0, 80, 320, "- GAME WON! -");
-			won.scale.x = 4;
-			won.scale.y = 4;
-			won.alignment = "center";
-			won.shadow = 0xff000000;
-			won.scrollFactor.x = 0;
-			won.scrollFactor.y = 0;
+			won 				= new FlxText(0, FlxG.height * 0.9, FlxG.width, "Você venceu!");
+			won.scale.x 		= 4;
+			won.scale.y 		= 4;
+			won.color 			= 0x00498A;
+			won.alignment 		= "center";
+			won.scrollFactor.x 	= 0;
+			won.scrollFactor.y 	= 0;
 			
-			stars = new FlxEmitter;
-			stars.x = 160;
-			stars.y = 100;
+			stars 				= new FlxEmitter();
+			stars.x 			= 160;
+			stars.y 			= 100;
+			stars.gravity 		= 150;
+			
 			stars.setXSpeed( -100, 100);
 			stars.setYSpeed( -200, 0);
 			stars.setRotation( 0, 0);
-			stars.gravity = 150;
+
 			stars.makeParticles(starPNG, 100, 0, false, 0);
 			
 			FlxG.playMusic(titleMusicMP3, 1);
 			
 			stars.start(false, 4, 0.1);
 			
-			add(sky);
+			add(background);
 			add(stars);
 			add(won);
 		}
 		
-		override public function update():void
-		{
+		override public function update():void {
 			super.update();
 			
-			if (FlxG.keys.any())
-			{
+			if (FlxG.keys.any()) {
 				FlxG.fade(0xff000000, 2, changeState);
 				FlxG.music.fadeOut(2);
 			}
 		}
 		
-		private function changeState():void
-		{
+		private function changeState():void {
 			FlxG.switchState(new MainMenuState);
 		}
 		
-		override public function destroy():void
-		{
+		override public function destroy():void {
+			background.destroy();
+			background = null;
 			super.destroy();
 		}
-		
 	}
-
 }

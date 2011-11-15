@@ -45,6 +45,7 @@ package
 			FlxG.camera.follow(player, FlxCamera.STYLE_PLATFORMER);
 			
 			FlxG.playMusic(level1MusicMP3, 0.5);
+			FlxG.mouse.hide();
 		}
 		
 		override public function update():void {
