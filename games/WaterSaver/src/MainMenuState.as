@@ -95,6 +95,8 @@ package
 		}
 		
 		override public function create():void {
+			Lang.init();
+			
 			if (FlxG.getPlugin(FlxSpecialFX) == null){
 				FlxG.addPlugin(new FlxSpecialFX);
 			}
@@ -121,7 +123,7 @@ package
 			title.scrollFactor.x 	= 0;
 			title.scrollFactor.y 	= 0;
 			
-			start 					= new FlxText(315, 250, 286, "Salve a água!");
+			start 					= new FlxText(315, 250, 286, Lang.get("gameTitle"));
 			start.alignment 		= "center";
 			start.color 			= 0x00498A;
 			start.shadow 			= 0x0000FF;
@@ -133,12 +135,12 @@ package
 			
 			floodfill.start();
 			
-			btnPlay = new FlxButtonPlus(400, 325, onClick, [ "play" ], "Iniciar!", 140);
+			btnPlay = new FlxButtonPlus(400, 325, onClick, [ "play" ], Lang.get("menuPlay"), 140);
 			btnPlay.updateInactiveButtonColors([ 0xffFF0080, 0xffFF80C0 ]);
 			btnPlay.updateActiveButtonColors([ 0xffFFFF00, 0xffFF8000 ]);
 			setScrollFactorButton(btnPlay, 0);
 			
-			btnCredits = new FlxButtonPlus(400, 360, onClick, [ "credits" ], "Créditos", 140);
+			btnCredits = new FlxButtonPlus(400, 360, onClick, [ "credits" ], Lang.get("menuCredits"), 140);
 			btnCredits.updateInactiveButtonColors([ 0xffFF0080, 0xffFF80C0 ]);
 			btnCredits.updateActiveButtonColors([ 0xffFFFF00, 0xffFF8000 ]);
 			setScrollFactorButton(btnCredits, 0);

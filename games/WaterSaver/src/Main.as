@@ -9,7 +9,7 @@ package
 	{
 		public function Main() {
 			super(640, 480, MainMenuState, 1, 60, 60);
-			//forceDebugger = true;
+			forceDebugger = true;
 		}
 	}
 }

@@ -7,8 +7,6 @@ package
 	{
 		[Embed(source = '../assets/drawings/20011050.jpg')] private var backgroundPNG:Class;
 		
-		private static var CREDITS_TEXT	:String	= "Salve a Água!\n\nProjeto 'Educação Ambiental e produção de material multimídia com caráter pedagógico e educativo'\n\nEdital Nº 01/PROEC/UFFS/2010\nUniversidade Federal da Fronteira Sul (UFFS)\nwww.uffs.edu.br\n\n\nCoordenador\nProf. Fernando Bevilacqua\n\n\nEquipe UFFS\nProf. Fernando Bevilacqua\nProfa. Adriana Salete Loss\nProf. Fabrício Bueno B. dos Santos\nProf. Rafael Piccin Torchelsen\nProf. Élsio Corá\nProf. Antonio Valmor de Campos\nProfa. Aurelia Lopes Gomes\nProfa. Joseane de Menezes Sterndt\nSimone de Melo (Pedagogia)\nMichel Soares Tartas (Ciência da Computação)\nPatric Venturini (Ciência da Computação)\n\n\\nCoordenação Equipe Escola E. Lourdes Tonin\nProfa. Rosilei Hans\n\n\nDesenhos\nAlunos do 5º ano, E.E. Lourdes Tonin\nAlunos da 6a série, E.E. Lourdes Tonin\n\n\nMúsica\nThiago Gobet Spada, trilhasonora.com\n\n\nAgradecimento especial\nEquipe e alunos da escola Lourdes Tonin\nThiago Gobet Spada\nRich \"Photonstorm\" Davey\n\n\nFinanciamento\nPró-reitoria de Extensão, UFFS";
-		
 		private var background	:FlxSprite;
 		private var credits		:FlxText;
 		private var btnBack		:FlxButtonPlus;
@@ -21,7 +19,7 @@ package
 			
 			background	= new FlxSprite(0, 0, backgroundPNG);
 			
-			credits 				= new FlxText(50, FlxG.height, FlxG.width - 100, CREDITS_TEXT);
+			credits 				= new FlxText(50, FlxG.height, FlxG.width - 100, Lang.get("creditsList"));
 			credits.alignment 		= "center";
 			credits.color 			= 0x000000;
 			credits.size 			= 14;
@@ -29,7 +27,7 @@ package
 			
 			FlxG.playMusic(titleMusicMP3, 1);
 			
-			btnBack = new FlxButtonPlus(FlxG.width - 200, FlxG.height * 0.90, goBack, null, "Voltar", 140);
+			btnBack = new FlxButtonPlus(FlxG.width - 200, FlxG.height * 0.90, goBack, null, Lang.get("menuBack"), 140);
 			btnBack.updateInactiveButtonColors([ 0xffFF0080, 0xffFF80C0 ]);
 			btnBack.updateActiveButtonColors([ 0xffFFFF00, 0xffFF8000 ]);
 			

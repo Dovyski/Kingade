@@ -15,9 +15,11 @@ package
 		}
 		
 		override public function create():void {
+			Lang.init();
+			
 			background = new FlxSprite(0, 0, water00PNG);
 			
-			won 				= new FlxText(0, FlxG.height * 0.9, FlxG.width, "Você venceu!");
+			won 				= new FlxText(0, FlxG.height * 0.9, FlxG.width, Lang.get("youWin"));
 			won.scale.x 		= 4;
 			won.scale.y 		= 4;
 			won.color 			= 0x00498A;

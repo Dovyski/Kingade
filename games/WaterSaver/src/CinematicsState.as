@@ -26,17 +26,17 @@ package
 										water06PNG
 									];
 		private var texts 			:Array = [
-										[ { "x": 50, "y": 65, "width": 230, "text": "Olá!\nSou o Sr. Água. Aperte qualquer tecla para continuar..." } ],
-										[ { "x": 242, "y": 35, "width": 215, "text": "\nExiste bastante água, mas ela pode acabar um dia..." } ],
-										[ { "x": 270, "y": 370, "width": 215, "text": "Esse é o ciclo da água. Temos que cuidar dele e poupar água." } ],
-										[ { "x": 260, "y": 75, "width": 215, "text": "Feche a torneira enquanto escova os dentes. Não gaste água potável!" } ],
+										[ { "x": 50, "y": 65, "width": 230, "text": Lang.get("dropSpeach1") } ],
+										[ { "x": 242, "y": 35, "width": 215, "text": Lang.get("dropSpeach2") } ],
+										[ { "x": 270, "y": 370, "width": 215, "text": Lang.get("dropSpeach3") } ],
+										[ { "x": 260, "y": 75, "width": 215, "text": Lang.get("dropSpeach4") } ],
 										[ 
-											{ "x": 355, "y": 35, "width": 215, "text": "\nGuarde a água da chuva para lavar o chão, por exemplo." },
-											{ "x": 350, "y": 195, "width": 220, "text": "Use balde para lavar o carro. Gasta menos água do que a manga." },
-											{ "x": 300, "y": 356, "width": 186, "text": "Não demore no banho e feche o chuveiro para se ensaboar." },
+											{ "x": 355, "y": 35, "width": 215, "text": Lang.get("dropSpeach5a")  },
+											{ "x": 350, "y": 195, "width": 220, "text": Lang.get("dropSpeach5b") },
+											{ "x": 300, "y": 356, "width": 186, "text": Lang.get("dropSpeach5c") },
 										],
-										[ { "x": 280, "y": 395, "width": 216, "text": "Poluir os rios destroi o meio ambiente." } ],
-										[ { "x": 290, "y": 225, "width": 250, "text": "Esse é o Sr. Folha. Ajude ele a proteger a água pegando as gotas e despoluindo os rios!\n\nBoa sorte!" } ],
+										[ { "x": 280, "y": 395, "width": 216, "text": Lang.get("dropSpeach6") } ],
+										[ { "x": 290, "y": 225, "width": 250, "text": Lang.get("dropSpeach7") } ],
 									];
 
 		public function CinematicsState() {

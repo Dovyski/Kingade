@@ -15,6 +15,8 @@ package
 		}
 		
 		override public function create():void	{
+			Lang.init();
+			
 			level = new Level1;
 			
 			starFX = new FlxSound();
