@@ -4,7 +4,7 @@ package
 	
 	public class LevelEndState extends FlxState
 	{
-		[Embed(source = "../assets/water_00.png")] public var water00PNG:Class;
+		[Embed(source = "../assets/water_00.jpg")] public var water00PNG:Class;
 		[Embed(source = "../assets/star.png")] public var starPNG:Class;
 		
 		private var background	:FlxSprite;

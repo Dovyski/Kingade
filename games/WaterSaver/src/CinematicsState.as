@@ -4,13 +4,13 @@ package
 	
 	public class CinematicsState extends FlxState
 	{
-		[Embed(source = "../assets/water_00.png")] public var water00PNG:Class;
-		[Embed(source = "../assets/water_01.png")] public var water01PNG:Class;
-		[Embed(source = "../assets/water_02.png")] public var water02PNG:Class;
-		[Embed(source = "../assets/water_03.png")] public var water03PNG:Class;
-		[Embed(source = "../assets/water_04.png")] public var water04PNG:Class;
-		[Embed(source = "../assets/water_05.png")] public var water05PNG:Class;
-		[Embed(source = "../assets/water_06.png")] public var water06PNG:Class;
+		[Embed(source = "../assets/water_00.jpg")] public var water00PNG:Class;
+		[Embed(source = "../assets/water_01.jpg")] public var water01PNG:Class;
+		[Embed(source = "../assets/water_02.jpg")] public var water02PNG:Class;
+		[Embed(source = "../assets/water_03.jpg")] public var water03PNG:Class;
+		[Embed(source = "../assets/water_04.jpg")] public var water04PNG:Class;
+		[Embed(source = "../assets/water_05.jpg")] public var water05PNG:Class;
+		[Embed(source = "../assets/water_06.jpg")] public var water06PNG:Class;
 		
 		private var image 			:FlxSprite;
 		private var time 			:Number;
