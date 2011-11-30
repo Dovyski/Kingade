@@ -18,10 +18,10 @@ package
 			start = new FlxPoint(x, y);
 			
 			jumpFX = new FlxSound();
-			jumpFX.loadEmbedded(jumpSFX);
+			jumpFX.loadEmbedded(Assets.sfxJump);
 			
 			walkFX = new FlxSound();
-			walkFX.loadEmbedded(walkSFX, true);
+			walkFX.loadEmbedded(Assets.sfxWalk, true);
 			
 			//	Load the player.png into this sprite.
 			//	The 2nd parameter tells Flixel it's a sprite sheet and it should chop it up into 16x18 sized frames.
@@ -64,7 +64,7 @@ package
 			//	Set a downward gravity of 400px/sec
 			FlxControl.player1.setGravity(0, 400);
 			
-			FlxControl.player1.setSounds(jumpFX, null, walkFX);
+			FlxControl.player1.setSounds(jumpFX);
 			
 			//	By default the sprite is facing to the right.
 			//	Changing this tells Flixel to flip the sprite frames to show the left-facing ones instead.

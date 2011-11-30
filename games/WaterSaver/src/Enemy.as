@@ -31,7 +31,7 @@ package
 
 		
 		override public function kill():void {
-			FlxG.play(catty2SFX, 0.5, false, true);
+			FlxG.play(Assets.sfxKillEnemy, 0.5, false, true);
 			
 			isDying 	= true;
 			frame 		= 1;

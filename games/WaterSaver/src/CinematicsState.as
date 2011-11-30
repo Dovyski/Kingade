@@ -98,7 +98,7 @@ package
 			currentIndex 		= 0;
 			textBoxes			= new Array();
 			
-			//FlxG.playMusic(titleMusicMP3, 1);
+			FlxG.playMusic(Assets.sfxWaterFlowing, 1);
 			
 			showNextImageAndText();
 		}

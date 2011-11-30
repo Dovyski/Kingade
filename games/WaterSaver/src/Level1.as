@@ -97,6 +97,7 @@ package
 		
 		private function hitWater(tile :FlxTile, object :FlxObject) :void {
 			if (object is Player) {
+				FlxG.play(Assets.sfxSpashWater);
 				(object as Player).restart();
 			}
 		}

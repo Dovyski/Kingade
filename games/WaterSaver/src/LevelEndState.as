@@ -38,7 +38,7 @@ package
 
 			stars.makeParticles(starPNG, 100, 0, false, 0);
 			
-			FlxG.playMusic(titleMusicMP3, 1);
+			FlxG.playMusic(Assets.musicMainMenu, 1);
 			
 			stars.start(false, 4, 0.1);
 			

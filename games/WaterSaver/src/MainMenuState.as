@@ -131,7 +131,7 @@ package
 			start.scrollFactor.x 	= 0;
 			start.scrollFactor.y 	= 0;
 			
-			FlxG.playMusic(titleMusicMP3, 1);
+			FlxG.playMusic(Assets.musicMainMenu, 1);
 			
 			floodfill.start();
 			

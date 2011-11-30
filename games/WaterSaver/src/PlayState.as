@@ -20,7 +20,7 @@ package
 			level = new Level1;
 			
 			starFX = new FlxSound();
-			starFX.loadEmbedded(starSFX);
+			starFX.loadEmbedded(Assets.sfxCollectDrop);
 			
 			player = new Player(4, 120);
 			
@@ -46,7 +46,7 @@ package
 			//	The camera will follow the player
 			FlxG.camera.follow(player, FlxCamera.STYLE_PLATFORMER);
 			
-			FlxG.playMusic(level1MusicMP3, 0.5);
+			FlxG.playMusic(Assets.musicGamePlay, 0.8);
 			FlxG.mouse.hide();
 		}
 		

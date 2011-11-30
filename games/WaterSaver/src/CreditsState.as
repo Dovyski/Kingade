@@ -25,7 +25,7 @@ package
 			credits.size 			= 14;
 			credits.velocity.y		= -18;
 			
-			FlxG.playMusic(titleMusicMP3, 1);
+			FlxG.playMusic(Assets.musicMainMenu, 1);
 			
 			btnBack = new FlxButtonPlus(FlxG.width - 200, FlxG.height * 0.90, goBack, null, Lang.get("menuBack"), 140);
 			btnBack.updateInactiveButtonColors([ 0xffFF0080, 0xffFF80C0 ]);
