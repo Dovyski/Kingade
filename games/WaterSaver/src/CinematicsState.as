@@ -110,7 +110,7 @@ package
 		override public function update():void {
 			super.update();
 			
-			if (FlxG.keys.any() && (getTime() - time) >= 500) {
+			if ((FlxG.keys.any() || FlxG.mouse.justPressed()) && (getTime() - time) >= 500) {
 				showNextImageAndText();
 			}
 		}
