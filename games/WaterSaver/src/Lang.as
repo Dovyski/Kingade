@@ -71,15 +71,24 @@ package
 			} catch (e :Error) {
 				FlxG.log("Unable to select language.");
 			}
-
 		} 
 		
 		/**
 		 * Set language
 		 * Use: Lang.setLng(Lang.ru);
 		 */
-		static public function setLang(slang:Object):void {
-				lngArr = slang;
+		static public function setLang(code:String):void {
+				switch(code) {
+					case "en":
+						lngArr = en;
+						break;
+						
+					case "br":
+					case "pt-br":
+					default:
+						lngArr = br;
+						break;
+				}
 		}
 		/**
 		 * Localization helper
