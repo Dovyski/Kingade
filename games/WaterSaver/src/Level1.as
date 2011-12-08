@@ -51,6 +51,7 @@ package
 			levelExit 	= new FlxPoint(99 * 16, 16 * 16);
 			width 		= map.width;
 			height 		= map.height;
+			totalTaps	= 0;
 			
 			elevator1 	= new Elevator(30, 6, 10, 0);
 			elevator2 	= new Elevator(80, 6, 0, 8);
@@ -62,6 +63,10 @@ package
 			
 			parseTaps();
 			parseEnemies();
+		}
+		
+		public function resetLevel() :void {
+			totalTaps = 0;
 		}
 		
 		private function parseEnemies():void {

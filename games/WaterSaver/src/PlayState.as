@@ -65,6 +65,7 @@ package
 		}
 		
 		private function levelUp() :void {
+			FlxG.score = 0;
 			player.exists = false;
 			FlxG.fade(0xff000000, 2, changeState);
 			FlxG.music.fadeOut(2);
