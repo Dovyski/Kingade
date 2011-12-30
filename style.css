@@ -32,7 +32,11 @@ section {
 	margin-top: 20px;
 }
 
-#social {
+.social {
 	margin-top: 10px;
 	text-align: right;
+}
+
+.footer {
+	margin-bottom: 25px;
 }
