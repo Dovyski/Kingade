@@ -34,19 +34,23 @@ package
 			sky.scrollFactor.x = 0.9;
 			
 			map = new FlxTilemap();
-			map.loadMap(new mapCSV, mapTilesStudentsPNG, 32, 32, 0, 0, 1, 31);
+			map.loadMap(new mapCSV, mapTilesStudentsPNG, 32, 32, 0);
+			
+			map.setTileProperties(171, FlxObject.ANY);
 			
 			//	Makes these tiles as allowed to be jumped UP through (but collide at all other angles)
-			map.setTileProperties(27, FlxObject.UP, null, null, 4);
-			map.setTileProperties(16, FlxObject.UP, null, null, 10);
-			map.setTileProperties(1, FlxObject.UP, null, null, 7);
+			//map.setTileProperties(40, FlxObject.UP, null, null, 4);
+			//map.setTileProperties(45, FlxObject.UP, null, null, 2);
+			//map.setTileProperties(16, FlxObject.UP, null, null, 10);
+			//map.setTileProperties(1, FlxObject.UP, null, null, 7);
 			
-			map.setTileProperties(33, FlxObject.NONE, null, null);
-			map.setTileProperties(154, FlxObject.NONE, null, null, 6);
-			map.setTileProperties(170, FlxObject.NONE, null, null, 6);
+			map.setTileProperties(45, FlxObject.NONE, null, null, 2);
+			//map.setTileProperties(77, FlxObject.NONE, null, null, 2);
+			//map.setTileProperties(150, FlxObject.NONE, null, null, 5);
+			//map.setTileProperties(170, FlxObject.NONE, null, null, 6);
 			
-			map.setTileProperties(126, FlxObject.NONE, hitWater, null); // water
-			map.setTileProperties(142, FlxObject.NONE, hitWater, null); // water
+			map.setTileProperties(104, FlxObject.NONE, hitWater, null, 2); // water
+			map.setTileProperties(120, FlxObject.NONE, hitWater, null, 2); // water
 			
 			levelExit 	= new FlxPoint(99 * 16, 16 * 16);
 			width 		= map.width;
@@ -78,7 +82,7 @@ package
 			for (var ty:int = 0; ty < map.heightInTiles; ty++) {
 				for (var tx:int = 0; tx < map.widthInTiles; tx++) {
 					if (map.getTile(tx, ty) != 0) {
-						enemies.add(new Enemy(tx, ty));
+						//enemies.add(new Enemy(tx, ty));
 					}
 				}
 			}
