@@ -31,18 +31,20 @@ package
 			sky = new FlxTilemap();
 			sky.loadMap(new skyCSV, skyTilesPNG, 500, 446);
 			sky.setTileProperties(1, FlxObject.NONE);
-			sky.scrollFactor.x = 0.9;
+			sky.scrollFactor.x = 0.7;
 			
 			map = new FlxTilemap();
 			map.loadMap(new mapCSV, mapTilesStudentsPNG, 32, 32, 0);
 			
-			map.setTileProperties(171, FlxObject.ANY);
+			map.setTileProperties(170, FlxObject.NONE, null, null, 2);
 			
 			//	Makes these tiles as allowed to be jumped UP through (but collide at all other angles)
 			//map.setTileProperties(40, FlxObject.UP, null, null, 4);
 			//map.setTileProperties(45, FlxObject.UP, null, null, 2);
 			//map.setTileProperties(16, FlxObject.UP, null, null, 10);
 			//map.setTileProperties(1, FlxObject.UP, null, null, 7);
+			
+			
 			
 			map.setTileProperties(45, FlxObject.NONE, null, null, 2);
 			//map.setTileProperties(77, FlxObject.NONE, null, null, 2);
@@ -58,7 +60,7 @@ package
 			totalTaps	= 0;
 			
 			elevator1 	= new Elevator(30, 6, 10, 0);
-			elevator2 	= new Elevator(80, 6, 0, 8);
+			elevator2 	= new Elevator(80, 6, 0, 12);
 			
 			add(sky);
 			add(map);

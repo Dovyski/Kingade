@@ -22,7 +22,7 @@ package
 			starFX = new FlxSound();
 			starFX.loadEmbedded(Assets.sfxCollectDrop);
 			
-			player = new Player(4, 120);
+			player = new Player(2 * 32, 200);
 			
 			score = new FlxText(0, 0, 100);
 			score.color = 0xffffffff;
