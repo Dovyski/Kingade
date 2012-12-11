@@ -84,7 +84,7 @@ package
 			for (var ty:int = 0; ty < map.heightInTiles; ty++) {
 				for (var tx:int = 0; tx < map.widthInTiles; tx++) {
 					if (map.getTile(tx, ty) != 0) {
-						//enemies.add(new Enemy(tx, ty));
+						enemies.add(new Enemy(tx, ty));
 					}
 				}
 			}

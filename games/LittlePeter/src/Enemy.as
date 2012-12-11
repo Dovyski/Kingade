@@ -20,6 +20,7 @@ package
 			
 			facing 		= FlxObject.RIGHT;
 			lastPos 	= new FlxPoint();
+			offset.y 	= -30;
 			
 			addAnimation("walk", [0, 1], 6, true);
 			play("walk");
