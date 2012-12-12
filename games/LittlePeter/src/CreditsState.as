@@ -5,7 +5,7 @@ package
 	
 	public class CreditsState extends FlxState
 	{
-		[Embed(source = '../assets/drawings/PEDR0513.jpg')] private var backgroundPNG:Class;
+		[Embed(source = '../assets/credits_background.png')] private var backgroundPNG:Class;
 		
 		private var background	:FlxSprite;
 		private var credits		:FlxText;
@@ -23,7 +23,7 @@ package
 			credits.alignment 		= "center";
 			credits.color 			= 0x000000;
 			credits.size 			= 14;
-			credits.velocity.y		= -18;
+			credits.velocity.y		= -28;
 			
 			FlxG.playMusic(Assets.musicMainMenu, 1);
 			

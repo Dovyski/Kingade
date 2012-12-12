@@ -13,21 +13,18 @@ package
 		
 		// English strings - Also use if other keys are null
 		public static var br :Object = {
-			gameTitle			:"Salve a água!", 
+			gameTitle			:"Pedrinho e a Água!", 
 			menuPlay			:"Iniciar!",
 			menuCredits			:"Créditos",
 			menuBack			:"Voltar",
-			creditsList			:"Salve a Água!\n\nProjeto 'Educação Ambiental e produção de material multimídia com caráter pedagógico e educativo'\n\nEdital 01/PROEC/UFFS/2010\nUniversidade Federal da Fronteira Sul (UFFS)\nwww.uffs.edu.br\n\n\nCoordenador\nProf. Fernando Bevilacqua\n\n\nEquipe UFFS\nProf. Fernando Bevilacqua\nProfa. Adriana Salete Loss\nProf. Fabrício Bueno B. dos Santos\nProf. Rafael Piccin Torchelsen\nProf. Élsio Corá\nProf. Antonio Valmor de Campos\nProfa. Aurelia Lopes Gomes\nProfa. Joseane de Menezes Sterndt\nSimone de Melo (Pedagogia)\nMichel Soares Tartas (Ciência da Computação)\nPatric Venturini (Ciência da Computação)\n\n\nEquipe Escola E. Lourdes Tonin\nRosilei Hans - Diretora\nOdete Baptista - Assessora de Direção\nLenair Braghini - Assistente de Educação\nMarinês Camatti - Professora do 5ª ano\nCleusa Hunttmann - Professora\nHelena Simon - Professora\nNeoimi Triches - Professora\nDolores Ferro - Professora\nWilson Fiabane - Professor\nAndressa Rodrigues - Professora\nIvan Mucelini - Professor\nNestor Caon - Professor\n\n\nDesenhos\nAlunos do 5º ano, E.E. Lourdes Tonin\nAlunos da 6a série, E.E. Lourdes Tonin\n\n\nMúsica\nThiago Gobet Spada, trilhasonora.com\n\n\nEfeitos sonoros\nflashkit.com/soundfx/\n\n\nAgradecimento especial\nEquipe e alunos da escola Lourdes Tonin\nThiago Gobet Spada\nRich \"Photonstorm\" Davey\n\n\nFinanciamento\nPró-reitoria de Extensão, UFFS",
+			creditsList			:"Pedrinho e a Água!\n\nProjeto 'Educação Ambiental e produção de material multimídia com caráter pedagógico e educativo'\n\nEdital 09/PROEC/UFFS/2011\nUniversidade Federal da Fronteira Sul (UFFS)\nwww.uffs.edu.br\n\n\nCoordenador\nProf. Fernando Bevilacqua\n\n\nEquipe UFFS\nProf. Fernando Bevilacqua\nProfa. Adriana Salete Loss\nProf. Rafael Piccin Torchelsen\nProfa. Aurelia Lopes Gomes\nSimone de Melo (Pedagogia)\nMichel Soares Tartas (Ciência da Computação)\nPatric Venturini (Ciência da Computação)\nPatrick Bastiani (Ciência da Computação)\n\n\nEquipe Escola E. B. Pedro Maciel\nClarisse Pressi - Diretora\n Angela Deliberali Smaniotto (professora 5º ano)\n\n\nDesenhos\nAlunos do 5º ano, E.E.B. Pedro Maciel\n\n\nMúsica\nThiago Gobet Spada, trilhasonora.com\n\n\nEfeitos sonoros\nflashkit.com/soundfx/\n\n\nAgradecimento especial\nEquipe e alunos da escola E. B. Pedro Maciel\nThiago Gobet Spada\nRich \"Photonstorm\" Davey\n\n\nFinanciamento\nPró-reitoria de Extensão, UFFS",
 			youWin				:"Você venceu!",
-			dropSpeach1			:"Olá!\nSou o Sr. Água. Aperte qualquer tecla para continuar...",
-			dropSpeach2			:"\nExiste bastante água, mas ela pode acabar um dia...",
-			dropSpeach3			:"Esse é o ciclo da água. Temos que cuidar dele e poupar água.",
-			dropSpeach4			:"Feche a torneira enquanto escova os dentes. Não gaste água potável!",
-			dropSpeach5a		:"\nGuarde a água da chuva para lavar o chão, por exemplo.",
-			dropSpeach5b		:"Use balde para lavar o carro. Gasta menos água do que a manga.",
-			dropSpeach5c		:"Não demore no banho e feche o chuveiro para se ensaboar.",
-			dropSpeach6			:"Poluir os rios destroi o meio ambiente.",
-			dropSpeach7			:"Esse é o Sr. Folha. Ajude ele a proteger a água pegando as gotas e despoluindo os rios!\n\nBoa sorte!"
+			dropSpeach1			:"Olá!\nSou o Pedrinho e estou aqui para falar da água. Aperte qualquer tecla para continuar!",
+			dropSpeach2			:"A água é um dos bens mais importantes que temos. Precisamos cuidar e economizar, se não ela pode acabar!",
+			dropSpeach3			:"Quando tomar banho, feche a o chuveiro enquanto se ensaboa. Imagine quanta água você pode economizar.",
+			dropSpeach4			:"Lave sua bicicleta ou seu carro usando um balde. É muito mais econômico do que usar a manga.",
+			dropSpeach5			:"Feche a torneira enquanto escova os dentes. Não gaste água potável!",
+			dropSpeach6			:"Agora me ajude a proteger e economizar água coletando todos os pingos que estão perdidos. Boa sorte!"
 		};
 		
 		// Brazilian portuguese strings
@@ -42,11 +39,8 @@ package
 			dropSpeach2			:"\nThere is a lot of water, but it may end some day...",
 			dropSpeach3			:"That is the water cicle. We must protect it and save water.",
 			dropSpeach4			:"Close the tap while you brush your teeth. Do not waste potable water!",
-			dropSpeach5a		:"\nSave some water from the rain to wash the floor, for instance.",
-			dropSpeach5b		:"Use a bucket to wash the car, it can save a lot of water. ",
-			dropSpeach5c		:"Take quick baths and hold the water while you lather.",
-			dropSpeach6			:"Dumping junk into the rivers will destroy them",
-			dropSpeach7			:"\nThis is Mr Leaf. Help him protect the water by catching the drops.\n\nGood luck!"
+			dropSpeach5			:"Close the tap while you brush your teeth. Do not waste potable water!",
+			dropSpeach6			:"Dumping junk into the rivers will destroy them"
 		};		
 		/**
 		 * 

@@ -4,7 +4,7 @@ package
 	
 	public class LevelEndState extends FlxState
 	{
-		[Embed(source = "../assets/water_00.jpg")] public var water00PNG:Class;
+		[Embed(source = "../assets/water_00.png")] public var water00PNG:Class;
 		[Embed(source = "../assets/star.png")] public var starPNG:Class;
 		
 		private var background	:FlxSprite;
@@ -19,7 +19,7 @@ package
 			
 			background = new FlxSprite(0, 0, water00PNG);
 			
-			won 				= new FlxText(0, FlxG.height * 0.9, FlxG.width, Lang.get("youWin"));
+			won 				= new FlxText(100, 50, 240, Lang.get("youWin"));
 			won.scale.x 		= 4;
 			won.scale.y 		= 4;
 			won.color 			= 0x00498A;
@@ -28,8 +28,8 @@ package
 			won.scrollFactor.y 	= 0;
 			
 			stars 				= new FlxEmitter();
-			stars.x 			= 160;
-			stars.y 			= 100;
+			stars.x 			= 360;
+			stars.y 			= 300;
 			stars.gravity 		= 150;
 			
 			stars.setXSpeed( -100, 100);
@@ -50,7 +50,7 @@ package
 		override public function update():void {
 			super.update();
 			
-			if (FlxG.keys.any()) {
+			if (FlxG.keys.any() || FlxG.mouse.justPressed()) {
 				FlxG.fade(0xff000000, 2, changeState);
 				FlxG.music.fadeOut(2);
 			}

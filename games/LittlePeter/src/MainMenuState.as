@@ -158,7 +158,7 @@ package
 		}
 		
 		private function startPlayState():void {
-			FlxG.switchState(new PlayState);
+			FlxG.switchState(new CinematicsState);
 		}
 		
 		private function startCreditsState():void {

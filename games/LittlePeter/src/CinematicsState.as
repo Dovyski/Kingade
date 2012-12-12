@@ -4,13 +4,11 @@ package
 	
 	public class CinematicsState extends FlxState
 	{
-		[Embed(source = "../assets/water_00.jpg")] public var water00PNG:Class;
-		[Embed(source = "../assets/water_01.jpg")] public var water01PNG:Class;
-		[Embed(source = "../assets/water_02.jpg")] public var water02PNG:Class;
-		[Embed(source = "../assets/water_03.jpg")] public var water03PNG:Class;
-		[Embed(source = "../assets/water_04.jpg")] public var water04PNG:Class;
-		[Embed(source = "../assets/water_05.jpg")] public var water05PNG:Class;
-		[Embed(source = "../assets/water_06.jpg")] public var water06PNG:Class;
+		[Embed(source = "../assets/water_00.png")] public var water00PNG:Class;
+		[Embed(source = "../assets/water_01.png")] public var water01PNG:Class;
+		[Embed(source = "../assets/water_02.png")] public var water02PNG:Class;
+		[Embed(source = "../assets/water_03.png")] public var water03PNG:Class;
+		[Embed(source = "../assets/water_04.png")] public var water04PNG:Class;
 		
 		private var image 			:FlxSprite;
 		private var time 			:Number;
@@ -22,21 +20,15 @@ package
 										water02PNG,
 										water03PNG,
 										water04PNG,
-										water05PNG,
-										water06PNG
+										water00PNG
 									];
 		private var texts 			:Array = [
-										[ { "x": 50, "y": 65, "width": 230, "text": Lang.get("dropSpeach1") } ],
-										[ { "x": 242, "y": 35, "width": 215, "text": Lang.get("dropSpeach2") } ],
-										[ { "x": 270, "y": 370, "width": 215, "text": Lang.get("dropSpeach3") } ],
-										[ { "x": 260, "y": 75, "width": 215, "text": Lang.get("dropSpeach4") } ],
-										[ 
-											{ "x": 355, "y": 35, "width": 215, "text": Lang.get("dropSpeach5a")  },
-											{ "x": 350, "y": 195, "width": 220, "text": Lang.get("dropSpeach5b") },
-											{ "x": 300, "y": 356, "width": 186, "text": Lang.get("dropSpeach5c") },
-										],
-										[ { "x": 280, "y": 395, "width": 216, "text": Lang.get("dropSpeach6") } ],
-										[ { "x": 290, "y": 225, "width": 250, "text": Lang.get("dropSpeach7") } ],
+										[ { "x": 91, "y": 30, "width": 293, "text": Lang.get("dropSpeach1") } 	],
+										[ { "x": 121, "y": 200, "width": 293, "text": Lang.get("dropSpeach2") } ],
+										[ { "x": 102, "y": 79, "width": 293, "text": Lang.get("dropSpeach3") } 	],
+										[ { "x": 123, "y": 71, "width": 293, "text": Lang.get("dropSpeach4") } 	],
+										[ { "x": 229, "y": 71, "width": 293, "text": Lang.get("dropSpeach5") } 	],
+										[ { "x": 91, "y": 30, "width": 293, "text": Lang.get("dropSpeach6") } 	],
 									];
 
 		public function CinematicsState() {
