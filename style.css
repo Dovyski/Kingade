@@ -4,6 +4,10 @@ h1,h2,h3,h4 {
 	font-size: 42px;
 }
 
+h3,h4 {
+	font-size: 22px;
+}
+
 #overview {
 	background: #0000aa url('img/header.jpg');
 	padding: 20px 0 5px 0;
@@ -18,6 +22,10 @@ h1,h2,h3,h4 {
 #overview p { 
 	font-size: 21px;
 	font-family: 'Cabin Sketch', cursive;
+}
+
+#acknowledge {
+	margin-top: 50px;
 }
 
 section {
@@ -39,4 +47,23 @@ section {
 
 .footer {
 	margin-bottom: 25px;
+}
+
+.game {
+	width: 50%;
+	float: left;
+	margin-top: 30px;
+}
+
+.game img {
+	float: left;
+	margin-right: 10px;
+}
+
+.game a:link,
+.game a:hover,
+.game a:visited,
+.game a:active {
+	text-decoration: none;
+	color: black;
 }
