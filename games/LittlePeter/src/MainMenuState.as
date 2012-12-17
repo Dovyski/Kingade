@@ -91,14 +91,14 @@ package
 			
 			floodfill.start();
 			
-			btnPlay = new FlxButtonPlus(250, 325, onClick, [ "play" ], Lang.get("menuPlay"), 140);
-			btnPlay.updateInactiveButtonColors([ 0xffFF0080, 0xffFF80C0 ]);
-			btnPlay.updateActiveButtonColors([ 0xffFFFF00, 0xffFF8000 ]);
+			btnPlay = new FlxButtonPlus(250, 355, onClick, [ "play" ], Lang.get("menuPlay"), 140);
+			btnPlay.updateInactiveButtonColors([ 0xff0000AF, 0xff0000FF ]);
+			btnPlay.updateActiveButtonColors([ 0xff0000AA, 0xff0000AA ]);
 			setScrollFactorButton(btnPlay, 0);
 			
-			btnCredits = new FlxButtonPlus(250, 360, onClick, [ "credits" ], Lang.get("menuCredits"), 140);
-			btnCredits.updateInactiveButtonColors([ 0xffFF0080, 0xffFF80C0 ]);
-			btnCredits.updateActiveButtonColors([ 0xffFFFF00, 0xffFF8000 ]);
+			btnCredits = new FlxButtonPlus(250, 390, onClick, [ "credits" ], Lang.get("menuCredits"), 140);
+			btnCredits.updateInactiveButtonColors([ 0xff0000AF, 0xff0000FF ]);
+			btnCredits.updateActiveButtonColors([ 0xff0000AA, 0xff0000AA ]);
 			setScrollFactorButton(btnCredits, 0);
 			
 			add(background);

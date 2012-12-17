@@ -23,13 +23,13 @@ package
 			credits.alignment 		= "center";
 			credits.color 			= 0x000000;
 			credits.size 			= 14;
-			credits.velocity.y		= -28;
+			credits.velocity.y		= -35;
 			
 			FlxG.playMusic(Assets.musicMainMenu, 1);
 			
 			btnBack = new FlxButtonPlus(FlxG.width - 200, FlxG.height * 0.90, goBack, null, Lang.get("menuBack"), 140);
-			btnBack.updateInactiveButtonColors([ 0xffFF0080, 0xffFF80C0 ]);
-			btnBack.updateActiveButtonColors([ 0xffFFFF00, 0xffFF8000 ]);
+			btnBack.updateInactiveButtonColors([ 0xff0000AF, 0xff0000FF ]);
+			btnBack.updateActiveButtonColors([ 0xff0000AA, 0xff0000AA ]);
 			
 			add(background);
 			add(credits);
